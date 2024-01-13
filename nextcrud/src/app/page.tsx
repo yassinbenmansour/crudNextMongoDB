@@ -1,8 +1,9 @@
-import Todo from "../../model/Todo"
+import Todo from "../model/Todo"
 const mongoose = require('mongoose')
 
 
 export default function Home() {
+
 
   //function to save todo 
   async function newNote(data : any){
@@ -18,6 +19,7 @@ export default function Home() {
       let newNote = new Todo({title , note});
       await newNote.save();
       console.log(newNote);
+      
 
     }catch(error){
       console.log(error)
@@ -27,6 +29,7 @@ export default function Home() {
   return (
     <main className='m-10 space-y-5'>
       <h1 className="text-2xl font-bold dark:text-white text-center"> Note</h1>
+
       <form action={newNote} >
         <div>
           <label className="block  text-lg font-medium text-dark ">Title</label>
