@@ -1,5 +1,7 @@
 import Todo from "../model/Todo"
 const mongoose = require('mongoose')
+import dbConnect from "./dbConnect";
+
 
 
 export default function Home() {
@@ -12,10 +14,7 @@ export default function Home() {
     let note = data.get('note')?.valueOf();
 
     try {
-        await mongoose.connect("mongodb://127.0.0.1:27017/Praticours", {
-          useNewUrlParser: true,
-          useUnifiedTopology: true,
-      });
+      dbConnect();
       let newNote = new Todo({title , note});
       await newNote.save();
       console.log(newNote);
