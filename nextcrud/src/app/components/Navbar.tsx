@@ -3,9 +3,9 @@ import Link from "next/link"
 export default function Navbar (){
     return (
         <>
-            <nav className="bg-white border-gray-200 bg-violet-700	">
+            <nav className=" border-gray-200 bg-violet-700">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
+                <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <img src="https://z9v8z6k8.rocketcdn.me/wp-content/uploads/2022/01/logo-pc-dark-bg-notag-1.svg" className="h-8" alt="Flowbite Logo" />
                 </a>
                 <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
